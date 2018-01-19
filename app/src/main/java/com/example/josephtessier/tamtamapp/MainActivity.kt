@@ -157,6 +157,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, userRegion, Toast.LENGTH_SHORT).show()
                 switchCV(cv4, cv5)
                 nextBtn.visibility = View.INVISIBLE
+                sendAllDetailsButton.visibility = View.VISIBLE
             }
         }
 
