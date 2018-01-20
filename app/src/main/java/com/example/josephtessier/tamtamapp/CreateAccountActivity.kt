@@ -14,9 +14,9 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.example.josephtessier.tamtamapp.R.id.*
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_createaccount.*
 
-class MainActivity : AppCompatActivity() {
+class CreateAccountActivity : AppCompatActivity() {
 
 //    override fun onNothingSelected(parent: AdapterView<*>?) {
 //        Toast.makeText(this, "Choisir une région", Toast.LENGTH_SHORT).show()
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_createaccount)
 
         // POUR LE RECYCLER.VIEW
         val listDeThemes = arrayOf("Loisirs", "Fêtes", "Auto-moto", "Shopping", "Multimédias", "Maison-travaux", "Services", "Beauté-soins", "Gastronomie", "Restaurant")
@@ -196,7 +196,7 @@ class MainActivity : AppCompatActivity() {
         destination.visibility = View.VISIBLE
     }
 
-    private fun registerMail(){
+    fun registerMail(){
         // logiquement faudrait aussi vérifier que ce mail n'est pas déjà référencé dans notre BDD
         var email = loginEmail.text.toString().trim()
         if(!TextUtils.isEmpty(email)) {
@@ -210,7 +210,7 @@ class MainActivity : AppCompatActivity() {
         } else Toast.makeText(this, "Renseigner un email", Toast.LENGTH_SHORT).show()
     }
 
-    private fun closeKeyboard(){
+    fun closeKeyboard(){
         (getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager).hideSoftInputFromWindow(loginEmail.getWindowToken(), 0)
     }
 
