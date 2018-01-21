@@ -149,7 +149,6 @@ class CreateAccountActivity : AppCompatActivity() {
             } else Toast.makeText(this, "Précisez votre âge", Toast.LENGTH_SHORT).show()
         }
 
-
         btnSubmit.setOnClickListener {
             if (userRegion!!.contains("—")) {
                 Toast.makeText(this, "Sélectionner une région", Toast.LENGTH_SHORT).show()
