@@ -3,49 +3,122 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent"
     tools:context="com.example.josephtessier.tamtamapp.IdChoiceActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="372dp"
-        android:layout_height="128dp"
-        android:padding="20dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_tamtamice_horiz" />
+    android:id="@+id/imageView2"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="50dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/logo_app" />
 
-    <Button
-        android:id="@+id/seConnecterBtn"
-        android:layout_width="242dp"
-        android:layout_height="57dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="84dp"
-        android:background="@color/colortamtamgreen"
-        android:text="@string/open_account"
-        android:textAlignment="center"
-        android:textSize="18sp"
+    <EditText
+        android:id="@+id/LOGINemailEdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkGrey"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:drawableStart="@drawable/ic_action_email"
+        android:ems="10"
+        android:textCursorDrawable="@drawable/bg_input_cursor_2"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <Button
-        android:id="@+id/creerCompteBtn"
-        android:layout_width="243dp"
-        android:layout_height="57dp"
+    <EditText
+        android:id="@+id/LOGINmotDePasseEdt"
+        android:drawableStart="@drawable/ic_action_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkGrey"
+        android:layout_marginEnd="8dp"
+        android:textCursorDrawable="@drawable/bg_input_cursor_2"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LOGINemailEdt" />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/identificationCV"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/colortamtamgreen"
-        android:text="@string/create_account"
-        android:textAlignment="center"
-        android:textSize="18sp"
+        android:layout_marginTop="28dp"
+        android:elevation="20dp"
+        app:cardBackgroundColor="@color/colortamtamgris"
+        app:cardCornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seConnecterBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/LOGINmotDePasseEdt"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="S'identifier"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/inscriptionCV"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"
+        android:elevation="20dp"
+        app:cardBackgroundColor="@color/colortamtamgris"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/identificationCV"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="S'inscrire"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>

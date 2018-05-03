@@ -20,7 +20,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:padding="12dp"
+            android:padding="8dp"
             android:layout_height="match_parent">
 
             <!-- <TextView
@@ -50,7 +50,7 @@
                 android:duplicateParentState="false"
                 android:text="checkBox text"
                 android:textColor="@color/darkGrey"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="normal" />
 
 

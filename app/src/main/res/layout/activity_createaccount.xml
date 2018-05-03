@@ -4,11 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
+    android:background="@drawable/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.josephtessier.tamtamapp.CreateAccountActivity">
 
     <ImageView
+        android:padding="10dp"
         android:background="@drawable/logo_tamtamice_horiz"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -16,24 +18,25 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayoutID"
+        android:background="@color/transparent"
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <android.support.v7.widget.CardView
             android:id="@+id/cv1"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/transparent"
             app:cardCornerRadius="13dp"
             android:layout_marginTop="203dp"
-            android:background="@color/lightGrey"
-            app:cardElevation="3dp"
-            app:cardUseCompatPadding="true"
+            app:cardUseCompatPadding="false"
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_centerInParent="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:background="@color/pastelBlue"
+                android:background="@color/transparentDark"
                 android:orientation="vertical"
                 android:paddingEnd="30dp"
                 android:paddingStart="30dp"
@@ -48,8 +51,9 @@
                     <EditText
                         android:id="@+id/loginEmail"
                         android:background="@drawable/selector_bg_edit_2"
-                        android:hint="Enter Email"
-                        android:textSize="14sp"
+                        android:hint="Entrer un email"
+                        android:textColorHint="@color/lightGrey"
+                        android:textSize="16sp"
                         android:padding="10dp"
                         android:inputType="textEmailAddress"
                         android:textCursorDrawable="@drawable/bg_input_cursor_2"
@@ -62,7 +66,7 @@
                         android:id="@+id/sendEmailBtn"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="60dp"
+                        android:layout_marginStart="65dp"
                         android:layout_marginTop="50dp"
                         android:background="@drawable/bt_shape"
                         android:stateListAnimator="@drawable/state_list_animator_z"
@@ -79,9 +83,9 @@
         <android.support.v7.widget.CardView
             android:id="@+id/cv2"
             app:cardCornerRadius="13dp"
+            app:cardElevation="0dp"
             android:layout_marginTop="203dp"
-            android:background="@color/lightGrey"
-            app:cardElevation="3dp"
+            app:cardBackgroundColor="@color/transparent"
             app:cardUseCompatPadding="true"
             android:layout_width="300dp"
             android:layout_height="300dp"
@@ -89,7 +93,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:background="@color/pastelBlue"
+                android:background="@color/transparentDark"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
 
@@ -105,6 +109,7 @@
                     android:background="@drawable/bt_shape"
                     android:stateListAnimator="@drawable/state_list_animator_z"
                     android:text="Homme"
+                    android:textColor="#d3d3d3"
                     android:textAlignment="center"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -122,6 +127,7 @@
                     android:background="@drawable/bt_shape"
                     android:stateListAnimator="@drawable/state_list_animator_z"
                     android:text="Femme"
+                    android:textColor="#d3d3d3"
                     android:textAlignment="center"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -134,9 +140,9 @@
         <android.support.v7.widget.CardView
             android:id="@+id/cv3"
             app:cardCornerRadius="13dp"
+            app:cardElevation="0dp"
             android:layout_marginTop="203dp"
-            android:background="@color/lightGrey"
-            app:cardElevation="3dp"
+            app:cardBackgroundColor="@color/transparent"
             app:cardUseCompatPadding="true"
             android:layout_width="300dp"
             android:layout_height="300dp"
@@ -144,20 +150,20 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:background="@color/pastelBlue"
+                android:background="@color/transparentDark"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
 
-                <TextView
+                <!--<TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:text="Quelle tranche d'âge vous correspond?"
                     android:textAlignment="center"
                     android:textSize="20sp"
-                    android:textColor="@color/black" />
+                    android:textColor="#d3d3d3" />-->
 
                 <RadioGroup
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/RGroup">
@@ -167,7 +173,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="40dp"
-                        android:buttonTint="@color/black"
+                        android:buttonTint="#d3d3d3"
+                        android:textColor="#d3d3d3"
                         android:textSize="25sp"
                         android:text=" 15 - 25 ans" />
 
@@ -177,7 +184,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_marginStart="40dp"
-                        android:buttonTint="@color/black"
+                        android:buttonTint="#d3d3d3"
+                        android:textColor="#d3d3d3"
                         android:textSize="25sp"
                         android:text=" 25 - 40 ans" />
 
@@ -185,7 +193,8 @@
                         android:id="@+id/radioButton40-60"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/black"
+                        android:buttonTint="#d3d3d3"
+                        android:textColor="#d3d3d3"
                         android:layout_marginTop="10dp"
                         android:layout_marginStart="40dp"
                         android:textSize="25sp"
@@ -195,7 +204,8 @@
                         android:id="@+id/radioButton60-plus"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/black"
+                        android:buttonTint="#d3d3d3"
+                        android:textColor="#d3d3d3"
                         android:layout_marginTop="10dp"
                         android:layout_marginStart="40dp"
                         android:textSize="25sp"
@@ -205,7 +215,8 @@
                 <Button
                     android:id="@+id/sendAgeBtn"
                     android:text="Valider"
-                    android:layout_marginTop="5dp"
+                    android:textColor="#d3d3d3"
+                    android:layout_marginTop="40dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginHorizontal="100dp"
                     android:background="@drawable/bt_shape"
@@ -220,8 +231,8 @@
             android:id="@+id/cv4"
             app:cardCornerRadius="13dp"
             android:layout_marginTop="203dp"
-            android:background="@color/lightGrey"
-            app:cardElevation="3dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardElevation="0dp"
             app:cardUseCompatPadding="true"
             android:layout_width="300dp"
             android:layout_height="300dp"
@@ -231,37 +242,56 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/pastelBlue"
+                android:background="@color/transparentDark"
                 android:orientation="vertical">
 
-                <android.support.v7.widget.AppCompatSpinner
-                    android:layout_marginTop="30dp"
-                    android:id="@+id/spinnerID"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_width="match_parent"
-                    android:backgroundTintMode="screen"
-                    android:layout_height="40dp"
-                    android:spinnerMode="dropdown"
-                    android:popupElevation="@dimen/cardview_compat_inset_shadow"
-                    android:prompt="@string/class_prompt" />
+                <android.support.v7.widget.CardView
+                    app:cardBackgroundColor="@color/lightGrey"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/spinnerID"
+                        android:layout_marginTop="5dp"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:backgroundTintMode="screen"
+                        android:layout_height="40dp"
+                        android:spinnerMode="dropdown"
+                        android:popupElevation="@dimen/cardview_compat_inset_shadow"
+                        android:prompt="@string/class_prompt" />
+
+                </android.support.v7.widget.CardView>
 
 
 
-                <android.support.v7.widget.AppCompatTextView
+
+             <!--   <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/spinner_selected_item"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content" />-->
+
+<!--
+
+                <TextView
+                    android:textColor="@color/lightGrey"
+                    android:textStyle="bold"
+                    android:id="@+id/spinner_selected_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />-->
 
 
                 <Button
                     android:id="@+id/btnSubmit"
+                    android:layout_marginTop="70dp"
                     android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
                     android:background="@drawable/bt_shape"
                     android:stateListAnimator="@drawable/state_list_animator_z"
-                    android:layout_marginEnd="50dp"
-                    android:layout_marginTop="30dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#d3d3d3"
@@ -277,20 +307,21 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
             android:layout_marginBottom="75dp"
-            android:background="@color/pastelBlue"
+            app:cardBackgroundColor="@color/transparent"
             app:cardCornerRadius="13dp"
-            app:cardElevation="3dp"
+            app:cardElevation="0dp"
             app:cardUseCompatPadding="true">
 
 
             <TextView
                 android:id="@+id/invitationThemes"
                 android:text="Thèmes intéressants"
+                android:textColor="#d3d3d3"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:padding="5dp"
                 android:textAllCaps="true"
-                android:background="@color/pastelBlue"
+                android:background="@color/transparentDark"
                 android:textSize="24sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -301,10 +332,11 @@
                 android:layout_marginTop="40dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/pastelBlue"
+                android:background="@color/transparentDark"
                 android:orientation="vertical">
 
                 <android.support.v7.widget.RecyclerView
+                    android:padding="5dp"
                     android:id="@+id/recycler_view"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
@@ -315,28 +347,58 @@
 
         <Button
             android:id="@+id/previousBtn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:background="@android:drawable/ic_media_rew" />
+            android:background="@drawable/chevron_left" />
 
-        <Button
+
+        <android.support.v7.widget.CardView
             android:id="@+id/sendAllDetailsButton"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_alignParentBottom="true"
-            android:text="Envoyer"
-            android:layout_marginBottom="10dp"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="@color/colortamtamgris"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LOGINmotDePasseEdt"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Envoyer"
+                    android:textColor="#fff"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
 
         <Button
             android:id="@+id/nextBtn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_alignParentBottom="true"
-            android:background="@android:drawable/ic_media_ff" />
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/chevron_right" />
 
     </RelativeLayout>
 

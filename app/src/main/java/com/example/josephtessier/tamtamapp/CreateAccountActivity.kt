@@ -113,14 +113,14 @@ class CreateAccountActivity : AppCompatActivity() {
             registerMail()
         }
 
-        loginEmail.setOnKeyListener(View.OnKeyListener{ view, keyCode, event ->
+        /*loginEmail.setOnKeyListener(View.OnKeyListener{ view, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_ENTER){
                 closeKeyboard()
                 registerMail()
                 return@OnKeyListener true
             }
             false
-        })
+        })*/
 
         sexHommeBtn.setOnClickListener{
             userSexe = 'H'
@@ -135,7 +135,7 @@ class CreateAccountActivity : AppCompatActivity() {
         }
 
         sendAgeBtn.setOnClickListener {
-            var age = RGroup.checkedRadioButtonId
+            val age = RGroup.checkedRadioButtonId
             when (age) {
                 radioButton15_25 -> userAge = 15
                 radioButton25_40 -> userAge = 25

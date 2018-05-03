@@ -10,7 +10,7 @@ import android.view.WindowManager
 
 class SplashActivity : AppCompatActivity() {
     private var mDelayHandler: Handler? = null
-    private val SPLASH_DELAY: Long = 2000 //2 seconds
+    private val SPLASH_DELAY: Long = 1000 //1 second
 
     internal val mRunnable: Runnable = Runnable {
         if (!isFinishing) {

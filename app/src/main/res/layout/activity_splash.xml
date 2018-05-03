@@ -7,16 +7,17 @@
     tools:context="com.example.josephtessier.tamtamapp.SplashActivity">
 
     <RelativeLayout
-
+        android:background="@drawable/green_gradient"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:layout_width="300dp"
             android:layout_height="300dp"
+            android:layout_above="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="136dp"
             android:background="@drawable/logo_app" />
 
         <ProgressBar
@@ -24,6 +25,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="30dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar" />
     </RelativeLayout>
 </FrameLayout>

@@ -29,14 +29,9 @@ class ThemeAdapter (list: ArrayList<Theme>, private val context: Context): Recyc
         holder.checkbox.tag = position
         holder.checkbox.setOnClickListener(View.OnClickListener {
             val pos = holder.checkbox.tag as Int
-            Toast.makeText(context, listAdapter[pos].nomTheme + " clicked", Toast.LENGTH_SHORT).show()
-
             listAdapter[pos].isSelected = !listAdapter[pos].isSelected
         })
     }
-
-
-
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var checkbox: CheckBox = itemView.findViewById(R.id.checkboxTheme)
